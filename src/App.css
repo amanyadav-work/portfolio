@@ -1,0 +1,109 @@
+body,#root{
+  background-color: black;
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #525252;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.article-title {
+  font-size: 200px;
+}
+
+
+.g-grey {
+  background: linear-gradient(to right, #555555, #b7c3e2, #656262);
+}
+.g-redish {
+  background:linear-gradient(to right, #752c2c, #fccfbb, #700303);
+}
+.g-blue {
+  background: linear-gradient(to right, #283bb5, #82a1fc, #00104e);
+}
+.g-yellow {
+  background: linear-gradient(to right, #534d29, #baa539, #554800);
+}
+.g-orange{
+  background: linear-gradient(to right, #efa38c7d, #ffc5b3, #b08e84b0);
+}
+a{
+  color: unset;
+}
+
+.gradient-title1 {
+  /* background: linear-gradient(to right, #8a51fe, #628aff, #36cfff); */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.head-phone {
+  background-color: transparent;
+  color: black;
+}
+
+.navbar-custom {
+  background-color: transparent;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.navbar-custom .nav-link {
+  color: rgb(191, 190, 190);
+  font-weight: 500;
+  font-size: 14px;
+  margin-right: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 50px 0;
+  background: 0 0;
+  position: relative;
+  z-index: 9999;
+  text-transform: uppercase;
+  height: auto !important;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #0071e3;
+}
+
+.navbar-custom .navbar-brand {
+  font-weight: bold;
+  font-size: 24px;
+  color: #333;
+}
+
+.navbar-custom .navbar-brand:hover {
+  color: #0071e3;
+}
+
+.navbar-custom .form-control {
+  width: 250px;
+}

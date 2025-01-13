@@ -1,0 +1,33 @@
+
+
+
+.p-relative{
+  position: relative;
+  height: 300vh;
+
+}
+.p-sticky{
+  position: sticky !important;
+  top: 0;
+}
+
+
+
+/* Style for the custom cursor circle */
+.cursor-circle {
+  width: 30px;
+  height: 30px;
+  z-index: 9999999;
+  position: fixed;
+  backdrop-filter: blur(1.1px);
+  top: 0;
+  left: 0;
+  border: 3px solid #ffffff33;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+
+
+
+

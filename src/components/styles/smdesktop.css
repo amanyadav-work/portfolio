@@ -1,0 +1,28 @@
+@media (min-width:1024px) and (max-width:1200px) {
+
+    .hero-container{
+
+        width:450px
+        }
+        
+        .hero-heading {
+            font-size: 39px;}
+        
+        .smdesk-slider-heading{
+        font-size: 27px;}
+        
+        
+        .left-side {
+            right: 50%;
+        }
+        
+        .navhome {
+            width: unset;}
+        .hero-content-new {
+            top: 10%;
+            right: 41%;
+        }
+        
+
+
+}
