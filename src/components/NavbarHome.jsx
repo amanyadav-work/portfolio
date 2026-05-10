@@ -91,7 +91,7 @@ const NavbarHome = ({ secRef, isMobile }) => {
           <a className='nav-link rotate-link pl-2 pr-2' href="#section-3" >Experience</a>
           <a className='nav-link rotate-link pl-2 pr-2' href="#section-4" >Projects</a>
           <a className='nav-link rotate-link pl-2 pr-2' href="#section-5" >Contact</a>
-          <a className='nav-link rotate-link pl-2 pr-2' target='_blank' href="https://drive.google.com/file/d/1UEGh5i47aXej2C9wmfdMYWdlvqJ1ReQI/view" style={{ marginTop: "-13px" }}>CV<MdArrowOutward /></a>
+          <a className='nav-link rotate-link pl-2 pr-2' target='_blank' href="https://drive.google.com/file/d/10-wb8n5vyS-kvLKK0Q_qhyUrJEGxonYP/view" style={{ marginTop: "-13px" }}>CV<MdArrowOutward /></a>
         </div>
 
         <div className="col-4">
@@ -195,7 +195,7 @@ const NavbarHome = ({ secRef, isMobile }) => {
                     </li>
 
                   </ul>
-                  <a href="https://drive.google.com/file/d/1UEGh5i47aXej2C9wmfdMYWdlvqJ1ReQI/view" target="_blank" className='w-25 d-flex justify-content-center flex-column align-items-center edu-li'><MdDownload className='icon-blur h1' />CV</a>
+                  <a href="https://drive.google.com/file/d/10-wb8n5vyS-kvLKK0Q_qhyUrJEGxonYP/view" target="_blank" className='w-25 d-flex justify-content-center flex-column align-items-center edu-li'><MdDownload className='icon-blur h1' />CV</a>
                 </div>
               </div>
             </div>
