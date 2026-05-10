@@ -11,18 +11,18 @@ const Slider = ({ secRef, isMobile }) => {
     {
       cardTitle: "VR Career Engine",
       cardUrl: "https://career-ai-brown.vercel.app/",
-      cardImg: "/assets/micro-career-ai.png",
+      cardImg: "/assets/micro-career-ai.webp",
     },
     {
       cardTitle: "Oxyra Cloud Pipeline",
       cardUrl: "https://github.com/amanyadav-work/oxyra-cloud-pipeline",
-      cardImg: "/assets/oxyra_cloud.png",
+      cardImg: "/assets/oxyra_cloud.webp",
       btnTxt: "View System"
     },
     {
       cardTitle: "Minimal DNS Server",
       cardUrl: "https://github.com/amanyadav-work/dns-server",
-      cardImg: "/assets/dns-server-infographic.jpg",
+      cardImg: "/assets/dns-server-infographic.webp",
       btnTxt: "See Code"
     },
     {

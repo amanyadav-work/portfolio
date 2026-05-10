@@ -2,7 +2,7 @@
 
 Welcoming you to my portfolio! This is a personal project where I showcase my skills, work, and experience in web development. The website is built with modern technologies to provide a smooth and interactive experience.
 
-**View it live**: [amanwebdev.site](https://www.amanwebdev.site/)
+**View it live**: [yadavaman.com](https://www.yadavaman.com/)
 
 ## Technologies Used
 
