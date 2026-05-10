@@ -4,11 +4,11 @@ import './styles/Button.css'
 import './styles/CardItem.css'
 import { MdArrowOutward } from "react-icons/md";
 
-const Button = ({ text, defualtWidth, color, bgcolor, classes,link }) => {
+const Button = ({ text, defualtWidth, color, bgcolor, classes, link }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   // Replace spaces with non-breaking spaces so they can be handled by motion
-  const textWithSpaces = text.split('').map(char => char === ' ' ? '\u00A0' : char); 
+  const textWithSpaces = text.split('').map(char => char === ' ' ? '\u00A0' : char);
 
   return (
     <motion.a href={link} target='_blank'
@@ -41,7 +41,8 @@ const Button = ({ text, defualtWidth, color, bgcolor, classes,link }) => {
             {char}
           </motion.span>
         ))}
-        <MdArrowOutward />
+        <MdArrowOutward style={{ marginLeft: "1px", marginTop: "-3px" }}  />
+
       </div>
 
       {/* New text coming from the bottom */}
@@ -64,7 +65,7 @@ const Button = ({ text, defualtWidth, color, bgcolor, classes,link }) => {
             {char}
           </motion.span>
         ))}
-        <MdArrowOutward />
+        <MdArrowOutward style={{ marginLeft: "1px", marginTop: "-3px" }}  />
       </div>
     </motion.a>
   );

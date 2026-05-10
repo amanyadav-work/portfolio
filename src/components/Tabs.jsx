@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import './styles/Tabs.css';
 import { MdArrowOutward } from "react-icons/md";
 
@@ -8,16 +8,27 @@ const Tabs = () => {
 
   // Array of tab titles and content
   const tabs = [
-    { title: 'Innois', content: 'Built fully functional websites from scratch, enhancing my portfolio with international sites through teamwork.', link:'https://www.linkedin.com/company/innois' },
-   
-    { title: 'Web Promos', content: 'Assisted in starting a new brand, designing and developing 35+ crucial pages with modifications.', link:'https://www.webpromosindia.com/' },
-   
+    {
+      title: 'TuringX',
+      content: 'Worked on end-to-end data analytics applications, focusing on secure data pipelines, role-based access, and scalable frontend-backend integration using Next.js and Golang.',
+      link: 'https://www.turingx.in/'
+    },
+    {
+      title: 'Innois',
+      content: 'Developed and deployed client websites using WordPress, ensuring responsive design, SEO optimization, and smooth user experience.',
+      link: 'https://www.linkedin.com/company/innois'
+    },
+    {
+      title: 'Web Promos',
+      content: 'Contributed to website redesigns, building and optimizing 35+ pages with improved UI/UX and performance.',
+      link: 'https://www.webpromosindia.com/'
+    },
   ];
 
   // Toggle the active tab index
   const toggleTab = (index) => {
     if (activeIndex === index) {
-      setActiveIndex(null); // If the clicked tab is already active, hide the content
+      // setActiveIndex(null); // If the clicked tab is already active, hide the content
     } else {
       setActiveIndex(index); // Show the clicked tab content
     }
@@ -36,7 +47,7 @@ const Tabs = () => {
           </h3>
 
           {/* Content Section (visible only if this tab is active) */}
-          {activeIndex === index && <p className='gradient-title1 g-blue'><a aria-label="company-experience-link" target='_blank' href={tab.link} className='exp-links'>See Website<MdArrowOutward color='blue' /></a> <br/><br/>{tab.content}</p>}
+          {activeIndex === index && <p className='gradient-title1 g-blue'><a aria-label="company-experience-link" target='_blank' href={tab.link} className='exp-links'>See Website<MdArrowOutward color='blue' /></a> <br /><br />{tab.content}</p>}
         </div>
       ))}
     </div>
