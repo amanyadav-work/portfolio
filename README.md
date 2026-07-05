@@ -4,7 +4,7 @@ Welcoming you to my portfolio! This is a personal project where I showcase my sk
 
 **View it live**: [yadavaman.com](http://yadavaman.com/)
 
-## 🏆 Web Design Awards
+<h2 align="center">🏆 Design Awards & Features</h2>
 
 <p align="center">
   <a href="https://www.webdesignawards.io/nominees/aman-yadav?ref=badge">
@@ -25,8 +25,12 @@ Welcoming you to my portfolio! This is a personal project where I showcase my sk
 </p>
 
 <p align="center">
-  <strong>Featured & Recognized by Web Design Awards</strong><br>
-  <a href="https://www.webdesignawards.io/nominees/aman-yadav?ref=badge">View Award Profile ↗</a>
+  <sub>
+    Also featured on
+    <a href="https://orpetron.com/sites/web-developer-portfolio/">Orpetron</a> •
+    <a href="https://www.website-award.com/sotd/aman%C2%B4s-web-developer-portfolio">Website Award</a> •
+    <a href="https://wdawards.com/web/web-developer-portfolio">WD Awards</a>
+  </sub>
 </p>
 
 ## Technologies Used
