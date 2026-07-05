@@ -1,10 +1,5 @@
-# The Portfolio Website
 
-Welcoming you to my portfolio! This is a personal project where I showcase my skills, work, and experience in web development. The website is built with modern technologies to provide a smooth and interactive experience.
-
-**View it live**: [yadavaman.com](http://yadavaman.com/)
-
-<h2 align="center">🏆 Design Awards & Features</h2>
+<h2 align="center"> Awards & Features</h2>
 
 <p align="center">
   <a href="https://www.webdesignawards.io/nominees/aman-yadav?ref=badge">
@@ -29,9 +24,18 @@ Welcoming you to my portfolio! This is a personal project where I showcase my sk
     Also featured on
     <a href="https://orpetron.com/sites/web-developer-portfolio/">Orpetron</a> •
     <a href="https://www.website-award.com/sotd/aman%C2%B4s-web-developer-portfolio">Website Award</a> •
-    <a href="https://wdawards.com/web/web-developer-portfolio">WD Awards</a>
+    <a href="https://wdawards.com/web/web-developer-portfolio">WD Awards</a> •
+    <a href="https://www.webguruawards.com/sites/web-developer-3d-porfolio">Web Guru Awards</a>
   </sub>
 </p>
+
+<hr>
+
+# The Portfolio Website
+
+Welcoming you to my portfolio! This is a personal project where I showcase my skills, work, and experience in web development. The website is built with modern technologies to provide a smooth and interactive experience.
+
+**View it live**: [yadavaman.com](http://yadavaman.com/)
 
 ## Technologies Used
 
