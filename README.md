@@ -4,6 +4,31 @@ Welcoming you to my portfolio! This is a personal project where I showcase my sk
 
 **View it live**: [yadavaman.com](http://yadavaman.com/)
 
+## 🏆 Web Design Awards
+
+<p align="center">
+  <a href="https://www.webdesignawards.io/nominees/aman-yadav?ref=badge">
+    <img src="https://www.webdesignawards.io/badges/2025/nominee_2025.webp" width="100" alt="Nominee" />
+  </a>
+  <a href="https://www.webdesignawards.io/nominees/aman-yadav?ref=badge">
+    <img src="https://www.webdesignawards.io/badges/2025/winner_2025.webp" width="100" alt="Winner" />
+  </a>
+  <a href="https://www.webdesignawards.io/nominees/aman-yadav?ref=badge">
+    <img src="https://www.webdesignawards.io/badges/2025/site_of_the_month_2025.webp" width="100" alt="Site of the Month" />
+  </a>
+  <a href="https://www.webdesignawards.io/nominees/aman-yadav?ref=badge">
+    <img src="https://www.webdesignawards.io/badges/2026/best_of_portfolio_2026.webp" width="100" alt="Best of Portfolio 2026" />
+  </a>
+  <a href="https://www.webdesignawards.io/nominees/aman-yadav?ref=badge">
+    <img src="https://www.webdesignawards.io/badges/2026/best_of_graphic-designer_2026.webp" width="100" alt="Best of Graphic Designer 2026" />
+  </a>
+</p>
+
+<p align="center">
+  <strong>Featured & Recognized by Web Design Awards</strong><br>
+  <a href="https://www.webdesignawards.io/nominees/aman-yadav?ref=badge">View Award Profile ↗</a>
+</p>
+
 ## Technologies Used
 
 - **React.js** – JavaScript library for building user interfaces.
