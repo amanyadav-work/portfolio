@@ -159,6 +159,10 @@ body:has(.cursor-circle) .cursor-circle {
     top: 24%;
 }
 
+.list-group-item-action:not(.active):focus, .list-group-item-action:not(.active):hover {
+    color: white;
+    background-color: transparent !important;
+}
 .icon-blur {
     backdrop-filter: blur(10px);
     padding: 10px;
