@@ -95,6 +95,26 @@ svg {
     color: white;
 }
 
+.cursor-circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.12);
+    pointer-events: none;
+    z-index: 100000;
+    opacity: 0;
+    transition: opacity 180ms ease;
+}
+
+body:has(.cursor-circle) .cursor-circle {
+    opacity: 1;
+}
+
 .navhome {
     z-index: 9999;
     position: fixed;

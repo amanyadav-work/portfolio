@@ -4,19 +4,19 @@ import './styles/Button.css'
 import './styles/CardItem.css'
 import { MdArrowOutward } from "react-icons/md";
 
-const Button = ({ text, defualtWidth, color, bgcolor, classes, link }) => {
+const Button = ({ label, defaultWidth, color, backgroundColor, className, href }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   // Replace spaces with non-breaking spaces so they can be handled by motion
-  const textWithSpaces = text.split('').map(char => char === ' ' ? '\u00A0' : char);
+  const textWithSpaces = label.split('').map(char => char === ' ' ? '\u00A0' : char);
 
   return (
-    <motion.a href={link} target='_blank'
-      className={`text-container ${classes}`}
+    <motion.a href={href} target='_blank'
+      className={`text-container ${className}`}
       style={{
-        width: `${defualtWidth ? defualtWidth : "100%"}`,
+        width: `${defaultWidth ? defaultWidth : "100%"}`,
         color: `${color ? color : "#191b19"}`,
-        backgroundColor: `${bgcolor ? bgcolor : "#b4e300"}`
+        backgroundColor: `${backgroundColor ? backgroundColor : "#b4e300"}`
       }}
       onHoverStart={() => setIsHovered(true)} // Set hover state to true
       onHoverEnd={() => setIsHovered(false)} // Set hover state to false
