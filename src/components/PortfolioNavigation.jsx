@@ -17,21 +17,23 @@ import { MdDownload } from "react-icons/md";
 import Tabs from './Tabs';
 import gsap from 'gsap';
 import { useEffect, useState, useRef } from 'react';
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import './styles/Home.css'
 import { DiMongodb } from "react-icons/di";
 import { CgFigma } from "react-icons/cg";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { CONTACT_FORM_CONFIG, EXTERNAL_LINKS } from "../constants/portfolio";
 
 
-const NavbarHome = ({ secRef, isMobile }) => {
+const PortfolioNavigation = ({ sectionRefs, isMobile }) => {
   const form = useRef();
   const [status, setStatus] = useState({});
+  const { intro, about, experience, projects, contact, footer } = sectionRefs;
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_01giuqc', 'template_ty6kg9s', form.current, 'ZbIpsqh-31UoGH_Hs')
+    emailjs.sendForm(CONTACT_FORM_CONFIG.serviceId, CONTACT_FORM_CONFIG.templateId, form.current, CONTACT_FORM_CONFIG.publicKey)
       .then(
         () => {
           console.log('SUCCESS!');
@@ -53,6 +55,10 @@ const NavbarHome = ({ secRef, isMobile }) => {
 
 
   useEffect(() => {
+    if (isMobile) {
+      return undefined;
+    }
+
     gsap.set(".cursor-circle", { xPercent: -50, yPercent: -50 });
 
     let xTo = gsap.quickTo(".cursor-circle", "x", { duration: 0.5, ease: "expo.out" });
@@ -77,7 +83,7 @@ const NavbarHome = ({ secRef, isMobile }) => {
     return () => {
       window.removeEventListener("mousemove", moveCursor);
     };
-  }, []);
+  }, [isMobile]);
 
 
   return (
@@ -118,7 +124,8 @@ const NavbarHome = ({ secRef, isMobile }) => {
           transition={isMobile ? undefined : { delay: 0.3 }} // Wait for 2 seconds before fading in
           className="hero"
           id="section1"
-          ref={secRef.sectionRef1}
+          data-scroll-snap
+          ref={intro}
         >
           <p className='top-status'>
             ~ By Aman Yadav</p>
@@ -128,14 +135,14 @@ const NavbarHome = ({ secRef, isMobile }) => {
               <p className="hero-text">It took me a while to say that...</p>
               <h1 className="hero-heading gradient-title1 g-grey">
                 I Have Been Fixing The Web Since February 2021.
-                <a href="https://www.linkedin.com/in/amanyadav-workprofile/" target="_blank" aria-label="Linkedin Profile"> LinkedIn <MdArrowOutward /></a>
+                <a href={EXTERNAL_LINKS.linkedin} target="_blank" aria-label="Linkedin Profile"> LinkedIn <MdArrowOutward /></a>
               </h1>
             </div>
           </div>
         </motion.div>
 
 
-        <div className="p-relative" id="section-2">
+        <div className="p-relative" id="section-2" data-scroll-snap>
 
 
           <motion.div
@@ -146,7 +153,7 @@ const NavbarHome = ({ secRef, isMobile }) => {
             exit={isMobile ? undefined : { opacity: 0, y: "400px" }}
             className="hero p-sticky"
             id="section2"
-            ref={secRef.sectionRef2}
+            ref={about}
           >
 
             <div className="hero-container hero-container-new" bis_skin_checked="1">
@@ -178,7 +185,7 @@ const NavbarHome = ({ secRef, isMobile }) => {
                 <p className="" style={{ color: "#8a3535" }}>An brief introductory chapter regarding..</p>
                 <h1 className="hero-heading gradient-title1 g-redish hero-bannerr">
                   About Aman Yadav, and The Tech Skills Stack.
-                  <a href="https://github.com/amanyadav-work" target="_blank" aria-label="github-profile"> GitHub <MdArrowOutward color='red' /></a>
+                  <a href={EXTERNAL_LINKS.github} target="_blank" aria-label="github-profile"> GitHub <MdArrowOutward color='red' /></a>
                 </h1>
                 <p className="hero-text gradient-title1 g-redish opacity-75">
                   I’m 21, based in Mumbai, India. passionate about building impactful web applications and exploring new technologies. Beyond coding, I occasionally tinker with Docker, experiment with VPNs and proxies, and explore OS-level curiosities—small ways I keep learning and challenging myself.
@@ -203,7 +210,7 @@ const NavbarHome = ({ secRef, isMobile }) => {
         </div>
 
 
-        <div className="p-relative" id="section-3">
+        <div className="p-relative" id="section-3" data-scroll-snap>
           <motion.div
             initial={isMobile ? undefined : { opacity: 0, y: "-100px" }}
             whileInView={isMobile ? undefined : { opacity: 1, y: "0px" }}
@@ -212,7 +219,7 @@ const NavbarHome = ({ secRef, isMobile }) => {
             exit={isMobile ? undefined : { opacity: 0, y: "400px" }}
             className="hero p-sticky"
             id="section3"
-            ref={secRef.sectionRef3}
+            ref={experience}
           >
 
             <div className="hero-container left-side">
@@ -222,7 +229,7 @@ const NavbarHome = ({ secRef, isMobile }) => {
                 </p>
                 <h1 className="hero-heading gradient-title1 g-blue">
                   Building Scalable & Driven Applications. <br />
-                  <a href="https://www.behance.net/aman-yadav" target="_blank" aria-label="Behance Profile Link">
+                  <a href={EXTERNAL_LINKS.behance} target="_blank" aria-label="Behance Profile Link">
                     Behance <MdArrowOutward color='blue' />
                   </a>
                 </h1>
@@ -240,12 +247,12 @@ const NavbarHome = ({ secRef, isMobile }) => {
 
         <section id="section-4">
 
-          <Slider secRef={secRef} isMobile={isMobile} />
+          <Slider sectionRefs={sectionRefs} isMobile={isMobile} />
 
         </section>
 
 
-        <section className='p-relative' id='section-5'>
+        <section className='p-relative' id='section-5' data-scroll-snap>
           <motion.div
             initial={isMobile ? undefined : { opacity: 0, y: "-100px" }}
             whileInView={isMobile ? undefined : { opacity: 1, y: "0px" }}
@@ -254,7 +261,7 @@ const NavbarHome = ({ secRef, isMobile }) => {
             exit={isMobile ? undefined : { opacity: 0, y: "400px" }}
             className="hero p-sticky"
             id="section5"
-            ref={secRef.sectionRef5}
+            ref={contact}
           >
             <div className="hero-container right-side">
               <div className="hero-content">
@@ -262,10 +269,10 @@ const NavbarHome = ({ secRef, isMobile }) => {
                 />
                 <p className="" style={{ color: "#ffffff80" }}>An brief regarding..</p>
                 <h1 className="hero-heading gradient-title1 g-grey hero-bannerr">
-                  Let's Be In Talk
+                  Let&apos;s Be In Talk
                 </h1>
                 <p className="hero-text gradient-title1 g-grey opacity-75">
-                  Have a project in mind? I'm always excited to discuss new ideas, collaborate on innovative solutions, and create amazing web experiences together with creative minds.
+                  Have a project in mind? I&apos;m always excited to discuss new ideas, collaborate on innovative solutions, and create amazing web experiences together with creative minds.
 
                 </p>
                 <form ref={form} onSubmit={sendEmail}>
@@ -289,7 +296,7 @@ const NavbarHome = ({ secRef, isMobile }) => {
             </div></motion.div>
         </section>
 
-        <section id="section6" style={{ height: "100vh", position: "relative", zIndex: "99", color: "#ffb7a1" }} ref={secRef.sectionRef6}>
+        <section id="section6" data-scroll-snap style={{ height: "100vh", position: "relative", zIndex: "99", color: "#ffb7a1" }} ref={footer}>
 
 
           <motion.div
@@ -301,16 +308,16 @@ const NavbarHome = ({ secRef, isMobile }) => {
             className="hero-container right-side">
             <div className="hero-content d-flex gap-2 flex-direction-col">
               <div>
-                <a target='_blank' aria-label='linkedin-account-link' href="https://www.linkedin.com/in/amanyadav-workprofile/"><BsLinkedin className='icon-blur footericons' /></a>
-                <a target='_blank' aria-label='github-profile-link' href="https://github.com/amanyadav-work"><FaGithubSquare className='icon-blur footericons' /></a>
-                <a target='_blank' aria-label='upwork-account-link' href="https://www.upwork.com/freelancers/~01d92c3dd126cf590e?mp_source=share"><FaSquareUpwork className='icon-blur footericons' /></a>
-                <a target='_blank' aria-label="behance-profile-link" href="https://www.behance.net/aman-yadav"><FaBehanceSquare className='icon-blur footericons' /></a>
+                <a target='_blank' aria-label='linkedin-account-link' href={EXTERNAL_LINKS.linkedin}><BsLinkedin className='icon-blur footericons' /></a>
+                <a target='_blank' aria-label='github-profile-link' href={EXTERNAL_LINKS.github}><FaGithubSquare className='icon-blur footericons' /></a>
+                <a target='_blank' aria-label='upwork-account-link' href={EXTERNAL_LINKS.upwork}><FaSquareUpwork className='icon-blur footericons' /></a>
+                <a target='_blank' aria-label="behance-profile-link" href={EXTERNAL_LINKS.behance}><FaBehanceSquare className='icon-blur footericons' /></a>
                 <div>
                 </div>
 
                 <p className="hero-text gradient-title1 g-orange opacity-100 mt-3">
 
-                  The site is built with code, passion, and a bit of experimentation. It’s all about showcasing cool projects, learning new tricks, and pushing web dev boundaries with every line of code. The sphere bot model credits goes to <a target='_blank' aria-label="model-creditor-profile" style={{ borderBottom: '1px solid #ff572261' }} href="https://sketchfab.com/3d-models/sphere-bot-6c3a32958c2d43cdbf12a7109616bdbe">haupt from sketchfab.</a>
+                  The site is built with code, passion, and a bit of experimentation. It’s all about showcasing cool projects, learning new tricks, and pushing web dev boundaries with every line of code. The sphere bot model credits goes to <a target='_blank' aria-label="model-creditor-profile" style={{ borderBottom: '1px solid #ff572261' }} href={EXTERNAL_LINKS.modelCredit}>haupt from sketchfab.</a>
                 </p>
 
                 <p className="hero-text gradient-title1 g-orange opacity-100 border-top foot-border pt-2 pb-2 border-bottom">
@@ -330,4 +337,4 @@ const NavbarHome = ({ secRef, isMobile }) => {
   );
 };
 
-export default NavbarHome;
+export default PortfolioNavigation;
