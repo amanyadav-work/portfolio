@@ -2,7 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   title: {
-    default: "Aman Yadav | Software Development Engineer",
+    default: "Aman Yadav - Software Development Engineer",
     template: "%s | Aman Yadav",
   },
   description:
