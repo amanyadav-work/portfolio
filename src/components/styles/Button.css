@@ -1,0 +1,42 @@
+
+
+.text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Individual letter animation styling */
+  .wavy-letter {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    position: relative;
+    opacity: 0; /* Letters initially invisible */
+  }
+  
+  .text-container:hover {
+    cursor: pointer;
+  }
+  
+  body {
+    font-family: 'Outfit', sans-serif !important;
+  }
+  .text-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 30px; /* Adjust based on your text size */
+  }
+  
+  .original-text,
+  .new-text {
+    position: absolute;
+  }
+  
+  .wavy-letter {
+    display: inline-block;
+  }
+  
