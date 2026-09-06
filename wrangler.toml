@@ -1,9 +1,12 @@
 name = "portfolio"
-main = ".open-next/server.js"
+main = ".open-next/worker.js"
 compatibility_date = "2026-09-06"
 
-[env.development]
-name = "portfolio-dev"
+[build]
+command = "npm run build:cloudflare"
 
 [env.production]
 name = "portfolio"
+
+[env.development]
+name = "portfolio-dev"
