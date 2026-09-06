@@ -1,0 +1,9 @@
+name = "portfolio"
+main = ".open-next/server.js"
+compatibility_date = "2026-09-06"
+
+[env.development]
+name = "portfolio-dev"
+
+[env.production]
+name = "portfolio"
