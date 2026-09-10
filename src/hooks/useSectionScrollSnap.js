@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
-const WHEEL_THRESHOLD = 1000;
-const SNAP_DURATION = 1000;
+const WHEEL_THRESHOLD = 100;
+const SNAP_DURATION = 300;
 const SNAP_SELECTOR = "[data-scroll-snap], [data-scroll-track]";
 const SCROLL_TRACK_SELECTOR = "[data-scroll-track]";
 

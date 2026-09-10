@@ -284,7 +284,17 @@ const PortfolioNavigation = ({ sectionRefs, isMobile }) => {
                     }} required />
                   </div>
                   <div className="mb-3" data-bs-theme='dark'>
-                    <textarea className="form-control form-control-sm bg-transparent gradient-title1 g-grey" id="exampleFormControlTextarea1" rows="6" name='message' placeholder="Your Message" required></textarea>
+                    <textarea
+                      className="form-control form-control-sm bg-transparent gradient-title1 g-grey"
+                      id="exampleFormControlTextarea1"
+                      rows="6"
+                      name="message"
+                      placeholder="Your Message"
+                      maxLength={400}
+                      style={{ resize: "none", overflowY: "auto" }}
+                      required
+                    ></textarea>
+
                   </div>
                   <div className="mt-2 d-flex gap-2 align-items-center">
                     <button type="submit" className=" btn btn-sm btn-outline-secondary">Send Message</button>
